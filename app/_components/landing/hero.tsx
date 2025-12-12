@@ -42,6 +42,7 @@ export default function Hero() {
           className="bg-black text-white py-4"
         />
       </div>
+      {/* <img className="w-1/2 h-1/2" src="/images/cow-sick.png" alt="" style={{filter: "grayscale(100%)"}} /> */}
     </section>
   );
 }
