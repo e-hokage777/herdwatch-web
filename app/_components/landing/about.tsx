@@ -32,7 +32,7 @@ export default function About() {
         </Card>
         <Card className="p-4 flex flex-col gap-4 items-center flex-1">
           <Thermometer className="w-32 h-32" />
-          <h2 className="text-2xl">Temperature Monitoring</h2>
+          <h2 className="text-2xl">TEMPERATURE MONITORING</h2>
           <p className="text-sm">
             Detects abnormal body temperature early, helping farmers identify
             fevers, infections, or heat stress before they worsen.
