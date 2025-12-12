@@ -3,8 +3,8 @@ import BenefitCard from "./benefit-card";
 
 export default function Benefits() {
   return (
-    <section className="pt-20 pb-8 bg-gray-200">
-      <div className="px-8">
+    <section id="benefits" className="pt-20  bg-gray-200">
+      <div className="px-4 container mx-auto">
         <h4 className="text-start">
           Why <strong>use</strong> Herdwatch ?
         </h4>

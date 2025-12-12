@@ -1,4 +1,12 @@
+"use client";
+
 import { cn } from "@/lib/utils";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function BenefitCard({
   imgSrc,
@@ -12,25 +20,58 @@ export default function BenefitCard({
   description: string;
   reverse?: boolean;
 }) {
+  const imageRef = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top center",
+        },
+      })
+      .from(imageRef.current, {
+        x: reverse ? 100 : -100,
+        opacity: 0,
+      })
+      .from(textRef.current, {
+        x: reverse ? -100 : 100,
+        opacity: 0,
+      });
+  }, []);
+
   return (
     <div
+      ref={containerRef}
       className={cn(
-        "w-full px-8 py-8 flex items-center gap-4",
-        reverse && "flex-row-reverse bg-black text-white",
+        "w-full py-8",
+        reverse && " bg-black text-white",
         props.className
       )}
     >
-      <div className="flex-1 h-96">
-        <img
-          src={imgSrc}
-          alt=""
-          className="object-cover w-full h-full"
-          style={{ filter: "grayscale(100%)" }}
-        />
-      </div>
-      <div className="flex-1 flex flex-col gap-4">
-        <h2 className="text-2xl">{title}</h2>
-        <p>{description}</p>
+      <div
+        ref={imageRef}
+        className={cn(
+          "container mx-auto px-4 flex items-center gap-4",
+          reverse && "flex-row-reverse"
+        )}
+      >
+        <div className="flex-1 h-96">
+          <img
+            src={imgSrc}
+            alt=""
+            className="object-cover w-full h-full"
+            style={{ filter: "grayscale(100%)" }}
+          />
+        </div>
+        <div ref={textRef} className="flex-1 flex flex-col gap-4">
+          <h2 className="text-2xl">{title}</h2>
+          <p>{description}</p>
+        </div>
       </div>
     </div>
   );

@@ -6,11 +6,8 @@ import Link from "next/link";
 
 export default function Contact() {
   return (
-    <section className="pt-20 pb-8 px-8">
-      {/* <h2 className={sectionTitleStyles}>
-          <span className="font-semibold">How</span> BiliBuddy Works
-        </h2> */}
-      <div className="flex justify-around">
+    <section id="contact" className="pt-20 pb-8">
+      <div className="flex justify-around container mx-auto px-4">
         <div className="flex-1 max-w-[420]">
           <h2 className="text-4xl mb-10  text-start">
             Get in <span className="font-semibold">touch</span>

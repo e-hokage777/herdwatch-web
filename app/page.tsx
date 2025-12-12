@@ -14,7 +14,9 @@ export default function Home() {
       <About />
       <Benefits/>
       <Contact/>
-      <Footer/>
+      <div className="border border-t-2 py-8">
+        <Footer/>
+      </div>
     </main>
   );
 }
