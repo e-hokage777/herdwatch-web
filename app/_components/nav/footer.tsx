@@ -3,7 +3,7 @@ import { Facebook, Linkedin, Twitter } from "lucide-react";
 export default function Footer() {
   return (
     <div className="w-full py-8">
-      <div className="w-full flex justify-between items-start px-4 container mx-auto">
+      <div className="px-4 container mx-auto w-full flex flex-col gap-8 justify-between items-start md:flex-row md:gap-4">
         <div className="flex flex-col gap-4">
           <div>QUICK LINKS</div>
           <ul className="flex flex-col gap-2">

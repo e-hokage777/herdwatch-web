@@ -23,7 +23,7 @@ export default function About() {
           Easily monitor the the status of all your cattle
         </h4>
 
-        <div className="flex flex-row justify-center gap-8 mt-8">
+        <div className="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-4">
           <Card className="p-4 flex flex-col gap-4 items-center flex-1">
             <Locate className="w-32 h-32" />
             <h2 className="text-2xl">GPS TRACKING</h2>

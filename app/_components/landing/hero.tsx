@@ -8,11 +8,14 @@ import CowReadyToRun from "../icons/cow-ready-to-run";
 
 export default function Hero() {
   return (
-    <section id="hero" className="h-dvh w-full  bg-gray-100">
-      <div className="container mx-auto px-4 h-full w-full flex flex-row justify-between items-center">
+    <section
+      id="hero"
+      className="pt-26 pb-8 min-h-dvh w-full bg-gray-100 md:pt-0 md:h-dvh"
+    >
+      <div className="container mx-auto px-4 h-full w-full flex flex-col items-center gap-8 md:flex-row md:justify-between  md:gap-4">
         {/** title and text */}
-        <div className="w-1/2 h-full flex flex-col justify-center items-start gap-4">
-          <h1 className=" text-6xl mb-8">
+        <div className="flex-1 h-full flex flex-col justify-center items-start gap-4">
+          <h1 className=" lg:text-6xl md:text-5xl text-4xl mb-8">
             <strong>Smart Livestock Monitoring</strong> for Healthier Herds and
             Lower Emissions
           </h1>
@@ -25,21 +28,25 @@ export default function Hero() {
         </div>
 
         {/** grid of images */}
-        <div className="grid grid-rows-2 grid-cols-2 w-1/2 h-1/2">
+        <div className="flex-1 w-full grid  grid-rows-2 grid-cols-2">
           <HeroGridCard
-            image={<CowThreeQuarter className="w-64 fill-white" />}
+            image={
+              <CowThreeQuarter className="fill-white size-24 md:size-32 lg:size-64  " />
+            }
             className="bg-black text-white py-4"
           />
           <HeroGridCard
-            image={<CowEat className="w-64" />}
+            image={<CowEat className="size-24 md:size-32 lg:size-64" />}
             className="bg-gray-50 py-4"
           />
           <HeroGridCard
-            image={<CowSleep className="w-64" />}
+            image={<CowSleep className="size-24 md:size-32 lg:size-64 " />}
             className="bg-white py-4"
           />
           <HeroGridCard
-            image={<CowReadyToRun className="w-64 fill-white" />}
+            image={
+              <CowReadyToRun className="fill-white size-24 md:size-32 lg:size-64  " />
+            }
             className="bg-black text-white py-4"
           />
         </div>

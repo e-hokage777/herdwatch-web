@@ -7,8 +7,8 @@ import Link from "next/link";
 export default function Contact() {
   return (
     <section id="contact" className="pt-20 pb-8">
-      <div className="flex justify-around container mx-auto px-4">
-        <div className="flex-1 max-w-[420]">
+      <div className="container mx-auto px-4 flex flex-col items-center gap-8  md:flex-row md:justify-center">
+        <div className="md:max-w-[420] md:flex-1">
           <h2 className="text-4xl mb-10  text-start">
             Get in <span className="font-semibold">touch</span>
           </h2>
@@ -64,8 +64,8 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <div className="w-0.5 bg-primary"></div>
-        <div className="flex-1 max-w-[420]">
+        <div className="w-0.5 bg-black"></div>
+        <div className=" w-full md:max-w-[420] md:flex-1">
           <h2 className="text-4xl mb-10  text-start">
             Send us a <span className="font-semibold">message</span>
           </h2>

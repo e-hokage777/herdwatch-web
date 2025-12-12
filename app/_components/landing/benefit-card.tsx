@@ -56,8 +56,8 @@ export default function BenefitCard({
       <div
         ref={imageRef}
         className={cn(
-          "container mx-auto px-4 flex items-center gap-4",
-          reverse && "flex-row-reverse"
+          "container mx-auto px-4 flex flex-col items-center gap-4 md:flex-row",
+          reverse && "md:flex-row-reverse"
         )}
       >
         <div className="flex-1 h-96">
