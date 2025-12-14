@@ -12,7 +12,7 @@ export default function NavBar() {
             <Link href="#hero">Home</Link>
           </li>
           <li>
-            <Link href="#about">About</Link>
+            <Link href="#features">Features</Link>
           </li>
           <li>
             <Link href="#benefits">Benefits</Link>

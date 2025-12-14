@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Hero from "./_components/landing/hero";
 import NavBar from "./_components/nav/nav";
-import About from "./_components/landing/about";
+import Features from "./_components/landing/features";
 import Benefits from "./_components/landing/benefits";
 import Footer from "./_components/nav/footer";
 import Contact from "./_components/landing/contact";
+import About from "./_components/landing/about";
 
 export default function Home() {
   return (
@@ -12,10 +13,11 @@ export default function Home() {
       <NavBar />
       <Hero />
       <About />
-      <Benefits/>
-      <Contact/>
+      <Features />
+      <Benefits />
+      <Contact />
       <div className="border border-t-2 py-8">
-        <Footer/>
+        <Footer />
       </div>
     </main>
   );

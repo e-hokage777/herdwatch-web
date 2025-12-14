@@ -1,61 +1,46 @@
-import { Card } from "@/components/ui/card";
-import { Locate, Activity, Thermometer, HeartPulseIcon } from "lucide-react";
+"use client";
+import { Float } from "@react-three/drei";
+import { HerdwatchModel } from "../3dmodels/herdwatch";
+import HerdWatchCanvas from "../3dmodels/herdwatch-canvas";
 
 export default function About() {
   return (
-    <section
-      id="about"
-      className="pt-20 pb-8 bg-cover bg-no-repeat bg-black/80"
-      style={{
-        backgroundImage: "url('/images/cattle-farm.jpg')",
-        filter: "grayscale(100%)",
-        backgroundPosition: "bottom",
-      }}
-    >
+    <section id="about" className="py-8">
       <div className="container mx-auto px-4">
-        <h4 className="text-center text-white">
-          About <strong>Herdwatch</strong>
-        </h4>
-        <h2 className="text-center text-white text-4xl">
-          Your Virtual Cattle Companion
-        </h2>
-        <h4 className="text-center text-white">
-          Easily monitor the the status of all your cattle
-        </h4>
-
-        <div className="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-4">
-          <Card className="p-4 flex flex-col gap-4 items-center flex-1">
-            <Locate className="w-32 h-32" />
-            <h2 className="text-2xl">GPS TRACKING</h2>
-            <p className="text-sm">
-              Tracks the real-time location of each animal to prevent stray
-              cattle, improve grazing management, and enhance security.
+        <div className="w-full h-screen flex flex-col-reverse  md:flex-row">
+          <div className="flex-1">
+            <HerdWatchCanvas>
+              <Float
+                speed={1} // Animation speed, defaults to 1
+                rotationIntensity={0.5} // XYZ rotation intensity, defaults to 1
+                floatIntensity={0.8} // Up/down float intensity, works like a multiplier with floatingRange,defaults to 1
+                floatingRange={[-0.9, 0.9]} // Range of y-axis values the object will float within, defaults to [-0.1,0.1]
+              >
+                <HerdwatchModel
+                  rotation={[Math.PI / 2, -Math.PI / 3, Math.PI / 4]}
+                />
+              </Float>
+            </HerdWatchCanvas>
+          </div>
+          <div className="flex-1 flex flex-col justify-center items-start gap-8">
+            <div>
+              <h4 className="text-start">Herdwatch ?</h4>
+              <h2 className="text-start text-4xl">What Exactly is Herdwatch</h2>
+            </div>
+            <p>
+              HerdWatch is an innovative livestock monitoring technology
+              designed to help farmers protect and manage their herds through {" "}
+              <strong>real-time data collection</strong> and{" "}
+              <strong>intelligent analysis</strong>. The system integrates
+              low-power sensors, GPS tracking, and wireless communication into a
+              compact wearable device that attaches comfortably to cattle.
+              HerdWatch addresses two major challenges faced by farmers across
+              Africa: the rising threat of cattle loss due to theft, disease,
+              and environmental stress, and the increasing need for data-driven
+              livestock management to improve productivity and support climate
+              resilience.
             </p>
-          </Card>
-          <Card className="p-4 flex flex-col gap-4 items-center flex-1">
-            <Thermometer className="w-32 h-32" />
-            <h2 className="text-2xl">TEMPERATURE MONITORING</h2>
-            <p className="text-sm">
-              Detects abnormal body temperature early, helping farmers identify
-              fevers, infections, or heat stress before they worsen.
-            </p>
-          </Card>
-          <Card className="p-4 flex flex-col gap-4 items-center flex-1">
-            <Activity className="w-32 h-32" />
-            <h2 className="text-2xl">ACTIVITY MONITORING</h2>
-            <p className="text-sm">
-              Monitors daily movement patterns to spot unusual behavior such as
-              reduced activity, injury, or early signs of illness.
-            </p>
-          </Card>
-          <Card className="p-4 flex flex-col gap-4 items-center flex-1">
-            <HeartPulseIcon className="w-32 h-32" />
-            <h2 className="text-2xl">HEART RATE MONITORING</h2>
-            <p className="text-sm">
-              Measures the animal&apos;s heart rate to provide deeper insights
-              into stress levels, health conditions, and overall wellbeing.
-            </p>
-          </Card>
+          </div>
         </div>
       </div>
     </section>
