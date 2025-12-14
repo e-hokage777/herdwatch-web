@@ -71,8 +71,8 @@ export default function BenefitCard({
           />
         </div>
         <div ref={textRef} className="flex-1 flex flex-col gap-4">
-          <h2 className="text-2xl">{title}</h2>
-          <p>{description}</p>
+          <h2 className="text-3xl font-semibold">{title}</h2>
+          <p className="text-lg">{description}</p>
         </div>
       </div>
     </div>

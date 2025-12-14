@@ -6,7 +6,7 @@ export default function Hero() {
       id="hero"
       className="min-h-dvh w-full  md:pt-0 md:h-dvh text-white relative"
       style={{
-        backgroundImage: "url('/images/hero-image.jpg')",
+        backgroundImage: "url('/images/hero-image.webp')",
         backgroundSize: "cover",
         backgroundPosition: "left bottom",
       }}

@@ -6,6 +6,7 @@ import Benefits from "./_components/landing/benefits";
 import Footer from "./_components/nav/footer";
 import Contact from "./_components/landing/contact";
 import About from "./_components/landing/about";
+import Sponsors from "./_components/landing/sponsors";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <About />
       <Features />
       <Benefits />
+      <Sponsors />
       <Contact />
       <div className="border border-t-2 py-8">
         <Footer />

@@ -15,25 +15,28 @@ export default function Benefits() {
 
       <div className="flex flex-col justify-center gap-8 mt-8">
         <BenefitCard
-        gray={false}
-          imgSrc="/images/cow-sick.png"
+          gray={false}
+          imgSrc="/images/cow-sick.webp"
           title="Early Disease Detection"
           description="Identify health problems before they spread, preventing animal loss and reducing carbon waste from premature cattle deaths."
         />
         <BenefitCard
+          gray={false}
           reverse
-          imgSrc="/images/cattle-farm.jpg"
+          imgSrc="/images/cattle-farm.webp"
           title="Optimized Grazing"
           description="GPS and activity data guide better land use, preventing overgrazing and lowering emissions linked to land degradation."
         />
         <BenefitCard
-          imgSrc="/images/cattle-farm.jpg"
+          gray={false}
+          imgSrc="/images/cattle-farm.webp"
           title="Lower Fuel Use"
           description="Remote monitoring reduces the need for motorbike rounds or long-distance grazing supervision."
         />
         <BenefitCard
+          gray={false}
           reverse
-          imgSrc="/images/crop-damage.jpg"
+          imgSrc="/images/crop-damage.webp"
           title="Prevent Stray Cattle Damage"
           description="Location tracking prevents animals from wandering into farms or forests, reducing vegetation loss."
         />
