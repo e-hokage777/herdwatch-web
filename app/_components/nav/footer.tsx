@@ -34,8 +34,9 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex flex-col gap-2">
-          <div className="text-5xl">
-            HERD<strong>WATCH</strong>
+          <div className="text-4xl flex gap-1 items-center">
+            <img src="/svgs/logo-dark.svg" alt="logo" className="size-32" />
+            <span>Aurok-1</span>
           </div>
           <p className="text-sm">&copy; 2025. All rights reserved</p>
         </div>
