@@ -5,9 +5,17 @@ import HerdWatchCanvas from "../3dmodels/herdwatch-canvas";
 
 export default function About() {
   return (
-    <section id="about" className="py-8">
-      <div className="container mx-auto px-4">
-        <div className="w-full h-screen flex flex-col-reverse  md:flex-row">
+    <section id="about" className="bg-tertiary relative">
+      <div
+        className="h-[20vh]  w-full"
+        style={{
+          backgroundImage: "url(/svgs/Aurok-1_Pattern.svg)",
+          backgroundSize: "cover",
+          backgroundPosition: "left bottom",
+        }}
+      />
+      <div className="container mx-auto px-4 py-8">
+        <div className="w-full h-[65vh] flex flex-col-reverse  md:flex-row">
           <div className="flex-1">
             <HerdWatchCanvas>
               <Float
@@ -24,17 +32,17 @@ export default function About() {
           </div>
           <div className="flex-1 flex flex-col justify-center items-start gap-8">
             <div>
-              <h4 className="text-start">Herdwatch ?</h4>
-              <h2 className="text-start text-4xl">What Exactly is Herdwatch</h2>
+              {/* <h4 className="text-start">Aurok-1 ?</h4> */}
+              <h2 className="text-start text-5xl">What Exactly is Aurok-1</h2>
             </div>
             <p>
-              HerdWatch is an innovative livestock monitoring technology
-              designed to help farmers protect and manage their herds through {" "}
+              Aurok-1 is an innovative livestock monitoring technology designed
+              to help farmers protect and manage their herds through{" "}
               <strong>real-time data collection</strong> and{" "}
               <strong>intelligent analysis</strong>. The system integrates
               low-power sensors, GPS tracking, and wireless communication into a
               compact wearable device that attaches comfortably to cattle.
-              HerdWatch addresses two major challenges faced by farmers across
+              Aurok-1 addresses two major challenges faced by farmers across
               Africa: the rising threat of cattle loss due to theft, disease,
               and environmental stress, and the increasing need for data-driven
               livestock management to improve productivity and support climate

@@ -6,10 +6,10 @@ export default function Benefits() {
     <section id="benefits" className="pt-20  bg-gray-200">
       <div className="px-4 container mx-auto">
         <h4 className="text-start">
-          Why <strong>use</strong> Herdwatch ?
+          Why <strong>use</strong> Aurok-1 ?
         </h4>
         <h2 className="text-start text-4xl">
-          Herdwatch helps solve a myraid of challenges
+          Aurok-1 helps solve a myraid of challenges
         </h2>
       </div>
 

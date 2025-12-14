@@ -14,7 +14,7 @@ export default function Features() {
     >
       <div className="container mx-auto px-4">
         <h4 className="text-center text-white">
-          About <strong>Herdwatch</strong>
+          About <strong>Aurok-1</strong>
         </h4>
         <h2 className="text-center text-white text-4xl">
           Your Virtual Cattle Companion

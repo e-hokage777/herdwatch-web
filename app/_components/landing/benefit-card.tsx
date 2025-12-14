@@ -49,7 +49,7 @@ export default function BenefitCard({
       ref={containerRef}
       className={cn(
         "w-full py-8",
-        reverse && " bg-black text-white",
+        reverse && " bg-primary text-white",
         props.className
       )}
     >
