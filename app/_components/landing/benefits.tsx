@@ -15,6 +15,7 @@ export default function Benefits() {
 
       <div className="flex flex-col justify-center gap-8 mt-8">
         <BenefitCard
+        gray={false}
           imgSrc="/images/cow-sick.png"
           title="Early Disease Detection"
           description="Identify health problems before they spread, preventing animal loss and reducing carbon waste from premature cattle deaths."

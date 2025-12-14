@@ -13,11 +13,13 @@ export default function BenefitCard({
   title,
   description,
   reverse = false,
+  gray=true,
   ...props
 }: React.HTMLAttributes<HTMLDivElement> & {
   imgSrc: string;
   title: string;
   description: string;
+  gray?: boolean;
   reverse?: boolean;
 }) {
   const imageRef = useRef<HTMLDivElement>(null);
@@ -65,7 +67,7 @@ export default function BenefitCard({
             src={imgSrc}
             alt=""
             className="object-cover w-full h-full"
-            style={{ filter: "grayscale(100%)" }}
+            style={{ filter: `grayscale(${gray ? 100 : 0}%)` }}
           />
         </div>
         <div ref={textRef} className="flex-1 flex flex-col gap-4">
