@@ -12,6 +12,9 @@ export default function Footer() {
               <Link href="#hero">Home</Link>
             </li>
             <li>
+              <Link href="#about">About</Link>
+            </li>
+            <li>
               <Link href="#features">Features</Link>
             </li>
             <li>
