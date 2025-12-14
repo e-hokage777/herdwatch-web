@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Facebook, Linkedin, Twitter } from "lucide-react";
 
 export default function Footer() {
@@ -7,10 +8,18 @@ export default function Footer() {
         <div className="flex flex-col gap-4">
           <div>QUICK LINKS</div>
           <ul className="flex flex-col gap-2">
-            <li>Home</li>
-            <li>About</li>
-            <li>Benefits</li>
-            <li>Contact</li>
+            <li>
+              <Link href="#hero">Home</Link>
+            </li>
+            <li>
+              <Link href="#about">About</Link>
+            </li>
+            <li>
+              <Link href="#benefits">Benefits</Link>
+            </li>
+            <li>
+              <Link href="#contact">Contact</Link>
+            </li>
           </ul>
         </div>
         <div className="flex flex-col gap-4">
