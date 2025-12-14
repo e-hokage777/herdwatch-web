@@ -31,23 +31,27 @@ export default function Hero() {
         <div className="flex-1 w-full grid  grid-rows-2 grid-cols-2">
           <HeroGridCard
             image={
-              <CowThreeQuarter className="fill-white size-24 md:size-32 lg:size-64  " />
+              <CowThreeQuarter className="fill-white size-24 md:size-32 lg:size-64" />
             }
+            title="2 km/h"
             className="bg-black text-white py-4"
           />
           <HeroGridCard
             image={<CowEat className="size-24 md:size-32 lg:size-64" />}
+            title="Eating"
             className="bg-gray-50 py-4"
           />
           <HeroGridCard
-            image={<CowSleep className="size-24 md:size-32 lg:size-64 " />}
+            image={<CowSleep className="size-24 md:size-32 lg:size-64"  />}
             className="bg-white py-4"
+            title="2 bps/min"
           />
           <HeroGridCard
             image={
               <CowReadyToRun className="fill-white size-24 md:size-32 lg:size-64  " />
             }
             className="bg-black text-white py-4"
+            title="3km away"
           />
         </div>
       </div>
