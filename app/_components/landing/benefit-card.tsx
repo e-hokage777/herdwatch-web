@@ -34,6 +34,7 @@ export default function BenefitCard({
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top center",
+          pin: false,
         },
       })
       .from(imageRef.current, {

@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-dvh w-full  md:pt-0 md:h-dvh text-white relative"
+      className="min-h-screen w-full  md:pt-0 md:h-dvh text-white relative"
       style={{
         backgroundImage: "url('/images/hero-image.webp')",
         backgroundSize: "cover",
@@ -14,7 +14,7 @@ export default function Hero() {
       }}
     >
       <div
-        className="w-full h-full pt-26 pb-8 "
+        className="w-full min-h-screen pt-26 pb-8 "
         style={{
           backgroundImage:
             "linear-gradient(to right, rgba(0, 0, 0, 200), rgba(0, 0, 0, 0.1))",

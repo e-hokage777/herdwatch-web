@@ -36,7 +36,7 @@ export default function HerdwatchCanvas({
 
   return (
     <Canvas
-      className="w-full h-full"
+      className="w-full h-full "
       camera={{ position: [0, 0, 13], zoom: zoom }}
     >
       <Suspense fallback={<CanvasLoader />}>

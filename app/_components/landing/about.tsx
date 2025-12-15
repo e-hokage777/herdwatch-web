@@ -5,7 +5,10 @@ import { Aurok1Model } from "../3dmodels/aurok1";
 
 export default function About() {
   return (
-    <section id="about" className="bg-tertiary relative">
+    <section
+      id="about"
+      className="bg-tertiary relative min-h-[80vh] flex flex-col"
+    >
       <div
         className="h-[15vh] w-full pointer-none"
         style={{
@@ -14,9 +17,9 @@ export default function About() {
           backgroundPosition: "left bottom",
         }}
       />
-      <div className="container mx-auto px-4 py-2">
-        <div className="w-full h-[65vh] flex flex-col-reverse  md:flex-row md:gap-4">
-          <div className="flex-1">
+      <div className="container  mx-auto px-4 py-2 flex-1">
+        <div className="w-full h-full flex flex-col-reverse  md:flex-row md:gap-4">
+          <div className=" flex justify-center items-center h-[60vh] md:flex-1">
             <HerdWatchCanvas>
               <Float
                 speed={1} // Animation speed, defaults to 1
@@ -30,7 +33,7 @@ export default function About() {
               </Float>
             </HerdWatchCanvas>
           </div>
-          <div className="flex-1 flex flex-col justify-center items-start gap-8">
+          <div className="flex-1  flex flex-col justify-center items-start gap-8">
             <div>
               {/* <h4 className="text-start">Aurok-1 ?</h4> */}
               <h2 className="text-start text-5xl">Introducing Aurok-1</h2>
