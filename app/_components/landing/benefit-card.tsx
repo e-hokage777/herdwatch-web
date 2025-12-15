@@ -51,7 +51,7 @@ export default function BenefitCard({
     <div
       ref={containerRef}
       className={cn(
-        "w-full py-8",
+        "w-full py-8 overflow-x-hidden",
         reverse && " bg-primary text-white",
         props.className
       )}

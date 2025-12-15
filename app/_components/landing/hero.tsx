@@ -14,13 +14,13 @@ export default function Hero() {
       }}
     >
       <div
-        className="w-full min-h-screen pt-26 pb-8 "
+        className="w-full  pt-26 pb-8 "
         style={{
           backgroundImage:
             "linear-gradient(to right, rgba(0, 0, 0, 200), rgba(0, 0, 0, 0.1))",
         }}
       >
-        <div className="container mx-auto px-4 h-full w-full flex flex-col items-center gap-8 md:flex-row md:justify-between  md:gap-4">
+        <div className="container mx-auto px-4 min-h-screen w-full flex flex-col items-center gap-8 md:flex-row md:justify-between  md:gap-4">
           {/** title and text */}
           <div className="flex-1 h-full flex flex-col justify-center items-start gap-4">
             <h1 className=" lg:text-6xl md:text-5xl text-4xl mb-8 font-bold">
