@@ -32,21 +32,21 @@ export default function Contact() {
               </div>
             </div>
             {/** contact item */}
-            <div className="flex gap-4">
+            {/* <div className="flex gap-4">
               <Mail className="size-7 mt-1" />
               <div>
                 <h3 className="text-2xl font-semibold">Email</h3>
                 <p>dipperlabknust@gmail.com</p>
               </div>
-            </div>
+            </div> */}
             {/** contact item */}
-            <div className="flex gap-4">
+            {/* <div className="flex gap-4">
               <Phone className="size-7 mt-1" />
               <div>
                 <h3 className="text-2xl font-semibold">Phone</h3>
                 <p>(233)-32-249-3435</p>
               </div>
-            </div>
+            </div> */}
             {/** Follow Us */}
             <div>
               <h3 className="text-2xl font-semibold mb-2">Follow Us</h3>

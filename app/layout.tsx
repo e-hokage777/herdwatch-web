@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Lexend_Deca, Ubuntu, Platypi } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
 import "./globals.css";
 
 const lexendDeca = Lexend_Deca({

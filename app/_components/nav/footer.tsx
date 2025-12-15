@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { Facebook, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Github, Linkedin, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
     <div className="w-full py-8">
       <div className="px-4 container mx-auto w-full flex flex-col gap-8 justify-between items-start md:flex-row md:gap-4">
         <div className="flex flex-col gap-4">
-          <div>QUICK LINKS</div>
+          <h4>QUICK LINKS</h4>
           <ul className="flex flex-col gap-2">
             <li>
               <Link href="#hero">Home</Link>
@@ -28,9 +28,15 @@ export default function Footer() {
         <div className="flex flex-col gap-4">
           <h4>CONTACT</h4>
           <div className="flex flex-row gap-2">
-            <Linkedin className="w-10 h-10" />
-            <Facebook className="w-10 h-10" />
-            <Twitter className="w-10 h-10" />
+            <Link href="#">
+              <Linkedin className="size-10" />
+            </Link>
+            <Link href="#">
+              <Github className="size-10" />
+            </Link>
+            <Link href="#">
+              <Twitter className="size-10" />
+            </Link>
           </div>
         </div>
         <div className="flex flex-col gap-2">
