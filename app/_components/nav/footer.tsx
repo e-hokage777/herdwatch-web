@@ -28,13 +28,13 @@ export default function Footer() {
         <div className="flex flex-col gap-4">
           <h4>CONTACT</h4>
           <div className="flex flex-row gap-2">
-            <Link href="#">
+            <Link href="https://www.linkedin.com/company/distributed-iot-platforms-privacy-and-edge-intelligence-research/posts/?feedView=all">
               <Linkedin className="size-10" />
             </Link>
-            <Link href="#">
+            <Link href="https://github.com/Dipper-Lab">
               <Github className="size-10" />
             </Link>
-            <Link href="#">
+            <Link href="https://twitter.com/dipperlabknust">
               <Twitter className="size-10" />
             </Link>
           </div>
