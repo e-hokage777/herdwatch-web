@@ -20,7 +20,7 @@ const platypi = Platypi({
 });
 
 export const metadata: Metadata = {
-  title: "Herdwatch",
+  title: "Aurok",
   description: "Cattle monitoring system",
 };
 
