@@ -10,20 +10,20 @@ export default function HerdwatchCanvas({
 }: {
   children: React.ReactNode;
 }) {
-  const [zoom, setZoom] = useState(1);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     if (window.innerWidth < 1031) {
-      setZoom(0.7);
+      setIsMobile(true);
     } else {
-      setZoom(1);
+      setIsMobile(false);
     }
 
     const updateZoom = () => {
       if (window.innerWidth < 1031) {
-        setZoom(0.5);
+        setIsMobile(true);
       } else {
-        setZoom(1);
+        setIsMobile(false);
       }
     };
 
@@ -37,15 +37,25 @@ export default function HerdwatchCanvas({
   return (
     <Canvas
       className="w-full h-full "
-      camera={{ position: [0, 0, 13], zoom: zoom }}
+      camera={{ position: [0, 0, 13], zoom: isMobile ? 0.5 : 1 }}
     >
-      <OrbitControls enableZoom={false} />
-      <directionalLight intensity={5} color="#34e5eb" />
-      <directionalLight intensity={10} position={[-15, 0, 0]} color="#34e5eb" />
-      <directionalLight intensity={5} position={[15, 0, 0]} color="#7134eb" />
-      <directionalLight intensity={5} position={[0, -15, 0]} color="#4acfed" />
-      <ambientLight intensity={20} />
-      <Suspense fallback={<CanvasLoader />}>{children}</Suspense>
+      <OrbitControls enabled={!isMobile} enableZoom={false} enablePan={false} />
+      <Suspense fallback={<CanvasLoader />}>
+        <directionalLight intensity={5} color="#34e5eb" />
+        <directionalLight
+          intensity={10}
+          position={[-15, 0, 0]}
+          color="#34e5eb"
+        />
+        <directionalLight intensity={5} position={[15, 0, 0]} color="#7134eb" />
+        <directionalLight
+          intensity={5}
+          position={[0, -15, 0]}
+          color="#4acfed"
+        />
+        <ambientLight intensity={20} />
+        {children}
+      </Suspense>
       <Preload all />
     </Canvas>
   );

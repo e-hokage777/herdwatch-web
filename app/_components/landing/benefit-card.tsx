@@ -6,6 +6,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useRef } from "react";
 import Image from "next/image";
+import { blurImageUri } from "@/lib/blur-image-uri";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,17 +33,16 @@ export default function BenefitCard({
     gsap.set(imageRef.current, {
       xPercent: reverse ? 100 : -100,
       opacity: 0,
-    })
+    });
     gsap.set(textRef.current, {
       xPercent: reverse ? -100 : 100,
       opacity: 0,
-    })
+    });
     gsap
       .timeline({
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top 70%",
-
         },
       })
       .to(imageRef.current, {
@@ -72,23 +72,22 @@ export default function BenefitCard({
           reverse && "md:flex-row-reverse"
         )}
       >
-        <div className="flex-1 h-96">
-          <div
-            ref={imageRef}
-            className={cn(
-              "w-full h-full",
-            )}
-          >
-
-            <Image src={imgSrc} alt={title} fill objectFit="cover"/>
+        <div className="md:flex-1 w-full h-96">
+          <div ref={imageRef} className={cn("w-full h-full relative")}>
+            <Image
+              src={imgSrc}
+              alt={title}
+              fill
+              placeholder="blur"
+              className="object-cover"
+              blurDataURL={blurImageUri}
+            />
           </div>
         </div>
-        <div className="flex-1">
+        <div className="md:flex-1">
           <div
             ref={textRef}
-            className={cn(
-              "w-full h-full flex flex-col gap-4",
-            )}
+            className={cn("w-full h-full flex flex-col gap-4")}
           >
             <h2 className="text-3xl font-semibold">{title}</h2>
             <p className="text-lg">{description}</p>

@@ -7,7 +7,7 @@ export default function Features() {
       id="features"
       className="pt-20 pb-8 bg-cover bg-no-repeat bg-black/80"
       style={{
-        backgroundImage: "url('/images/cattle-farm.jpg')",
+        backgroundImage: "url('/images/cattle-farm.webp')",
         filter: "grayscale(100%)",
         backgroundPosition: "bottom",
       }}

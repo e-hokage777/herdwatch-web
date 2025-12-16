@@ -4,10 +4,11 @@ export default function CanvasLoader() {
   const { progress } = useProgress();
 
   return (
-    <Html center fullscreen as="div">
+    <Html  as="div">
       <div className="size-full flex items-center justify-center">
-        {/* <div className="h-8 w-8 mb-2 animate-spin border-4 border-t-transparent border-white rounded-full" /> */}
-        <div className="text-2xl text-white">Loading {Math.round(progress)}%</div>
+          Loading {Math.round(progress)}%
+        <div className="text-2xl text-black">
+        </div>
       </div>
     </Html>
   );
