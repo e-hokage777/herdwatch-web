@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useRef } from "react";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,7 +14,7 @@ export default function BenefitCard({
   title,
   description,
   reverse = false,
-  gray=true,
+  gray = true,
   ...props
 }: React.HTMLAttributes<HTMLDivElement> & {
   imgSrc: string;
@@ -27,23 +28,32 @@ export default function BenefitCard({
   const containerRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-
-
+    // setting initial state for animation
+    gsap.set(imageRef.current, {
+      xPercent: reverse ? 100 : -100,
+      opacity: 0,
+    })
+    gsap.set(textRef.current, {
+      xPercent: reverse ? -100 : 100,
+      opacity: 0,
+    })
     gsap
       .timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top center",
-          pin: false,
+          start: "top 70%",
+
         },
       })
-      .from(imageRef.current, {
-        x: reverse ? 100 : -100,
-        opacity: 0,
+      .to(imageRef.current, {
+        xPercent: 0,
+        opacity: 1,
+        duration: 0.3,
       })
-      .from(textRef.current, {
-        x: reverse ? -100 : 100,
-        opacity: 0,
+      .to(textRef.current, {
+        xPercent: 0,
+        opacity: 1,
+        duration: 0.3,
       });
   }, []);
 
@@ -57,23 +67,32 @@ export default function BenefitCard({
       )}
     >
       <div
-        ref={imageRef}
         className={cn(
           "container mx-auto px-4 flex flex-col items-center gap-4 md:flex-row",
           reverse && "md:flex-row-reverse"
         )}
       >
         <div className="flex-1 h-96">
-          <img
-            src={imgSrc}
-            alt=""
-            className="object-cover w-full h-full"
-            style={{ filter: `grayscale(${gray ? 100 : 0}%)` }}
-          />
+          <div
+            ref={imageRef}
+            className={cn(
+              "w-full h-full",
+            )}
+          >
+
+            <Image src={imgSrc} alt={title} fill objectFit="cover"/>
+          </div>
         </div>
-        <div ref={textRef} className="flex-1 flex flex-col gap-4">
-          <h2 className="text-3xl font-semibold">{title}</h2>
-          <p className="text-lg">{description}</p>
+        <div className="flex-1">
+          <div
+            ref={textRef}
+            className={cn(
+              "w-full h-full flex flex-col gap-4",
+            )}
+          >
+            <h2 className="text-3xl font-semibold">{title}</h2>
+            <p className="text-lg">{description}</p>
+          </div>
         </div>
       </div>
     </div>
