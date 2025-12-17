@@ -39,7 +39,7 @@ export default function HerdwatchCanvas({
       className="w-full h-full "
       camera={{ position: [0, 0, 13], zoom: isMobile ? 0.5 : 1 }}
     >
-      <OrbitControls enabled={!isMobile} enableZoom={false} enablePan={false} />
+      <OrbitControls enableZoom={false} enablePan={false} />
       <Suspense fallback={<CanvasLoader />}>
         <directionalLight intensity={5} color="#34e5eb" />
         <directionalLight
