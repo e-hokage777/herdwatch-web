@@ -1,6 +1,4 @@
-import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
-import { ThreeElement } from "@react-three/fiber";
 import { Mesh } from "three";
 
 export function Aurok1Model(props: any) {
