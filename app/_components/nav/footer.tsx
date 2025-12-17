@@ -21,6 +21,9 @@ export default function Footer() {
               <Link href="#benefits">Benefits</Link>
             </li>
             <li>
+              <Link href="#sponsors">Sponsors</Link>
+            </li>
+            <li>
               <Link href="#contact">Contact</Link>
             </li>
           </ul>

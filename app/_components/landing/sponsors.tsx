@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Sponsors() {
   return (
-    <section className="flex flex-col items-center py-16">
+    <section id="sponsors" className="flex flex-col items-center py-16">
       <h2 className="text-4xl">Sponsored By</h2>
       <div className="mx-auto mt-8 flex flex-wrap gap-8 justify-center items-center">
         <Link href="https://www.britishcouncil.org.gh/" target="_blank">
@@ -19,8 +19,8 @@ export default function Sponsors() {
           <Image
             src="/svgs/dipper.svg"
             alt="sponsor"
-            width={200}
-            height={80}
+            width={300}
+            height={100}
             // className="size-24 md:w-32 md:h-32"
           />
         </Link>
