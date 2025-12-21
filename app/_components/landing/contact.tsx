@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Github, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
 import Link from "next/link";
+import ContactForm from "../forms/contact-form";
 
 export default function Contact() {
   return (
@@ -69,13 +70,7 @@ export default function Contact() {
           <h2 className="text-4xl mb-10  text-start">
             Send us a <span className="font-semibold">message</span>
           </h2>
-          <form action="" className="div flex flex-col gap-4">
-            <Input name="name" placeholder="Name" />
-            <Input name="email" placeholder="Email" />
-            <Input name="subject" placeholder="Subject" />
-            <Textarea placeholder="Message" className="min-h-80"></Textarea>
-            <Button className="text-xl py-6">Send Messsage</Button>
-          </form>
+          <ContactForm />
         </div>
       </div>
     </section>
